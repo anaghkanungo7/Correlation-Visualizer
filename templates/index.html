@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stock Correlation Visualizer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <h1>Visualizer</h1>
+
+
+        <form action="" method="post">
+            <label for="">First Stock</label>
+            <input type="text" placeholder="First stock ticker" name="first">
+            <label for="">Second Stock</label>
+            <input type="text" placeholder="Second stock ticker" name="second">
+
+            <input type="submit" value="Calculate" name="calculate">
+        </form>
+
+        <div>
+            <!-- Results here?? -->
+            {% if results %}
+            <img src={{ summaryImage }} alt="" width="35%" height="25%">
+            <img src={{ modelImage }} alt="" width="35%" height="25%">
+            {% else %}
+            <h3>No results found...</h3>
+            {% endif %}
+
+        </div>
+    </body>
+</html>
